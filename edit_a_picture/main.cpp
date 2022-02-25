@@ -41,8 +41,8 @@ void gomi();
 
 int main(void)
 {
-	/*try
-	{*/
+	try
+	{
 		//画像　読み込み・出力
 		const char pasr[6] = "read/";//読み込みファイルパス
 		const char pask[6] = "keep/";//保存ファイルパス
@@ -608,10 +608,10 @@ int main(void)
 		cv::destroyAllWindows();
 		printf("\n保存されませんでした\n");
 		return 0;
-	//}
-	//catch (const std::exception&)//エラー処理
-	//{
-	//	printf("エラー");
-	//	return -10;
-	//}
+	}
+	catch (const std::exception&)//エラー処理
+	{
+		printf("範囲外エラー");
+		return -10;
+	}
 }
